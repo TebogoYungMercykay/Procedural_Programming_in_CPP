@@ -49,6 +49,4 @@ int main()
         cout<<"*";
         store5 -=100;
     }cout<<endl;
-
-
 }
