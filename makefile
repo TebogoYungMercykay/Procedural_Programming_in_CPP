@@ -5,15 +5,12 @@ run:
 clean:
 	rm -f *.o *.tar main
 	clear
+	reset
 tar:
 	tar -cvz makefile *.cpp -f FileName.tar
-zip:
-	tar -cvz makefile *.cpp -f FileName.zip
 tar_gz:
 	tar -cvz makefile *.cpp -f FileName.tar.gz
 untar:
 	tar -zxvf *.tar
-unzip:
-	tar -zxvf *.zip
 untar_gz:
 	tar -zxvf *.tar.gz

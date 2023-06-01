@@ -12,7 +12,8 @@ string bubSort(double arr[8])
 	{
 		bubby=0;
 		double temporary;
-		for(int j=0;j<(8-i)-1;j++){
+		for(int j=0;j<(8-i)-1;j++)
+		{
 			if(arr[j]>arr[j+1])
 			{
 				temporary=arr[j];
@@ -21,7 +22,8 @@ string bubSort(double arr[8])
 				bubby+=1;
 			}
 		}
-		while(bubby==0){
+		while(bubby==0)
+		{
 			break;
 		}
 	}
@@ -45,15 +47,18 @@ int main()
 	int count=-1;
 	int bubble;
 	fstream search ("list.txt");
-	while(!search.eof()){
+	while(!search.eof())
+	{
 		for(int count=0;count<8;count++ )
 		{
-			if(count<7){
+			if(count<7)
+			{
 				(getline(search,Sawtt,','));
 				stringstream ss (Sawtt);
 				ss>>arr[count];
 			}
-			else if(count==7){
+			else if(count==7)
+			{
 				(getline(search,Sawtt));
 				stringstream ss (Sawtt);
 				ss>>arr[count];

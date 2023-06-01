@@ -1,10 +1,5 @@
 #include <iostream>
 #include <cmath>
-// using namespace std;
-// #include <process.h>
-// double linearEquation(int valuex);
-// double quadraticEquation(int valuex);
-// double exponentialEquation(int valuex,double result1,double result2);
 
 double linearEquation(int valuex)
 {
