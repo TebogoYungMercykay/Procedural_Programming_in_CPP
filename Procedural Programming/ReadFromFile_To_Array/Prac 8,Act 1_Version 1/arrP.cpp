@@ -9,14 +9,18 @@ string My_Fun(int My_Array[] ,int x)
 	int largest;
 	largest=-10000;
 	//Finding The Largest Element
-	for(int t=0;t<x;t++){
-		if(largest<My_Array[t]){
+	for(int t=0;t<x;t++)
+	{
+		if(largest<My_Array[t])
+		{
 			largest=My_Array[t];
 		}
 	}
 	//Perfoming The Main Purpose Of This Act1 of Practical 8
-	for(int bb=0;bb<x;bb++){
-		if(largest%2==0){
+	for(int bb=0;bb<x;bb++)
+	{
+		if(largest%2==0)
+		{
 			My_Array[bb]=My_Array[bb]*largest;
 		}
 		else 
@@ -28,13 +32,16 @@ string My_Fun(int My_Array[] ,int x)
 	string Outcome;
 	for(int f=0;f<x;f++)
 	{
-		if(x!=1){
-			if(f<(x-1)){
+		if(x!=1)
+		{
+			if(f<(x-1))
+			{
 				string Reece;
 				Reece=to_string(My_Array[f]);
 				Outcome+=Reece+',';
 			}
-				else if(f==(x-1)){
+				else if(f==(x-1))
+				{
 				string Reece;
 				Reece=to_string(My_Array[f]);
 				Outcome+=Reece+'\n';
@@ -57,7 +64,8 @@ int main()
 	const int L=8;
 	int *My_Array=new int[L];
 	
-	while(!Values_txt.eof()){
+	while(!Values_txt.eof())
+	{
 		int Array_len=0;
 		(getline(Values_txt,Storage, ';'));
 		istringstream Arr_len (Storage);
@@ -67,12 +75,14 @@ int main()
 		
 		for(int count=0;count<Array_len;count++ )
 		{
-			if(count<(Array_len-1)){
+			if(count<(Array_len-1))
+			{
 				(getline(Values_txt,Storage,','));
 				stringstream kk (Storage);
 				kk>>My_Array[count];
 			}
-			else if(count==(Array_len-1)){
+			else if(count==(Array_len-1))
+			{
 				(getline(Values_txt,Storage));
 				stringstream ss (Storage);
 				ss>>My_Array[count];
