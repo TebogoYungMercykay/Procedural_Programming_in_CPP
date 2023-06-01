@@ -5,6 +5,7 @@ run:
 clean:
 	rm -f *.o *.tar main
 	clear
+	reset
 tar:
 	tar -cvz makefile *.cpp -f FileName.tar
 zip:
