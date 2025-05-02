@@ -1,8 +1,8 @@
 # This is my makefile
-FILES = *.cpp *.csv
-NAME = Practical10
+FILES = *.cpp *.h *.csv *.txt *.md *.sh *.py
+NAME = Files
 main:
-	g++ -g *.cpp -std=c++98 -pedantic -Wall -Wextra -Werror -pthread -o main
+	g++ -g *.cpp -std=c++98 -pedantic -o main
 
 clean:
 	rm -f *.o *.gcov *.gcda *.gcno *.info *.gz *.html main test *.css output.txt coverage.txt
@@ -17,11 +17,3 @@ tar:
 
 untar:
 	tar -zxvf *.tar.gz
-
-cov:
-	make clean
-	g++ -fprofile-arcs -ftest-coverage -O0 -g -Wall -Wextra -Werror -o test main.cpp TesterHelpers.cpp ValueTesters.cpp
-	./test
-	gcov test-main.cpp -b -o .
-	gcov test-TesterHelpers.cpp -b -o .
-	gcov test-ValueTesters.cpp -b -o .
