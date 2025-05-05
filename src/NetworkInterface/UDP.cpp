@@ -18,12 +18,6 @@ std::string extractSourcePortBin(const std::string UDPPacket) {
   return UDPPacket.substr(0, 16);
 }
 
-// std::string extractSourcePortBin(const std::string UDPPacket) {
-//     int t = 16;
-//     std::string k = UDPPacket.substr(0, t);
-//     return k;
-// }
-
 std::string extractDestinationPortBin(const std::string UDPPacket) {
   return UDPPacket.substr(16, 16);
 }
