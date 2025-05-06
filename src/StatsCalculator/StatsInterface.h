@@ -7,8 +7,6 @@
 #include "AlgorithmConfiguration.h"
 #include "StatsCalculator.h"
 
-// See spec for descriptions of these functions
-
 float sumDataPoints();
 
 float sumDataPointsRev();
