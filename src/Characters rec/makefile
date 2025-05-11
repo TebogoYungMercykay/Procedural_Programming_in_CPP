@@ -1,6 +1,6 @@
 # This is my makefile
-FILES = *.cpp
-NAME = rec
+FILES = *.cpp *.h *.csv *.txt *.md *.sh *.py
+NAME = Files
 main:
 	g++ -g *.cpp -std=c++98 -pedantic -o main
 
@@ -17,11 +17,3 @@ tar:
 
 untar:
 	tar -zxvf *.tar.gz
-
-cov:
-	make clean
-	g++ -fprofile-arcs -ftest-coverage -O0 -g -Wall -Wextra -o test main.cpp TesterHelpers.cpp ValueTesters.cpp
-	./test
-	gcov test-main.cpp -b -o .
-	gcov test-TesterHelpers.cpp -b -o .
-	gcov test-ValueTesters.cpp -b -o .
